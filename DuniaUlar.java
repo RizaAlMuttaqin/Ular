@@ -16,9 +16,9 @@ public class DuniaUlar extends World
     public DuniaUlar()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(30, 20, 30);
-        GreenfootImage img = new GreenfootImage(30, 30);
-        img.drawRect(0, 0, 40, 40);
+        super(30, 20, 20);
+        GreenfootImage img = new GreenfootImage(20, 20);
+        img.drawRect(0, 0, 20, 20);
         setBackground(img);
         
         int x = Greenfoot.getRandomNumber(getWidth());

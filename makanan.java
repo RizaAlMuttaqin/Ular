@@ -14,10 +14,10 @@ public class makanan extends Actor
      */
     public makanan()
     {
-        //GreenfootImage img = new GreenfootImage(20,20);
-        //img.setColor(Color.GREEN);
-        //img.fill();
-        //setImage(img);
+        GreenfootImage img = new GreenfootImage(20,20);
+        img.setColor(Color.GREEN);
+        img.fill();
+        setImage(img);
     }
     
     public void act() 

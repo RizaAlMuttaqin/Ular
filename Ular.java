@@ -16,9 +16,10 @@ public class Ular extends Actor
     private final int kecepatan = 10;
     private int counter = 0;
     
+    private int makan = 0;
     public Ular()
     {
-        GreenfootImage img = new GreenfootImage(30, 30);
+        GreenfootImage img = new GreenfootImage(20, 20);
         img.fill();
         setImage(img);
         
@@ -32,29 +33,48 @@ public class Ular extends Actor
         if(isTouching(makanan.class))
         {
             removeTouching(makanan.class);
-            
+            makan++;
             DuniaUlar dunia = (DuniaUlar)getWorld();
             dunia.TambahMakanan();
         }
+        if(nabrakPinggiran()){
+            Greenfoot.stop();
+        }
+        if(isTouching(BuntutUlar.class))
+        {
+            Greenfoot.stop();
+        }
+    }
+    
+    private boolean nabrakPinggiran()
+    {
+        switch(getRotation()){
+            case kanan: return getX()==getWorld().getWidth()-1;
+            case bawah: return getY()==getWorld().getHeight()-1;
+            case kiri: return getX()==0;
+            case atas: return getY()==0;
+        }
+        return false;
     }
     
     private void gerakCuy()
     {
-        counter ++;
+        counter++;
         if(counter==kecepatan){
+            getWorld().addObject(new BuntutUlar(makan*kecepatan), getX(), getY());
             move(1);
             counter = 0;
         }
-        if(Greenfoot.isKeyDown("Kanan")){
+        if(Greenfoot.isKeyDown("right")){
             setRotation(kanan);
         }
-        if(Greenfoot.isKeyDown("Bawah")){
+        if(Greenfoot.isKeyDown("down")){
             setRotation(bawah);
         }
-        if(Greenfoot.isKeyDown("Kiri")){
+        if(Greenfoot.isKeyDown("left")){
             setRotation(kiri);
         }
-        if(Greenfoot.isKeyDown("Atas")){
+        if(Greenfoot.isKeyDown("up")){
             setRotation(atas);
         }
     }
