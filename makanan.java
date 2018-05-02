@@ -15,7 +15,7 @@ public class makanan extends Actor
     public makanan()
     {
         GreenfootImage img = new GreenfootImage(20,20);
-        img.setColor(Color.GREEN);
+        img.setColor(Color.PINK);
         img.fill();
         setImage(img);
     }
