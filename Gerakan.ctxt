@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Gerakan
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Gerakan\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ belok()
+comment1.text=\r\n\ Berputar\ 90\ derajat\ ke\ kanan\ (searah\ jarum\ jam).\r\n
+comment2.params=sudut
+comment2.target=void\ belok(int)
+comment2.text=\r\n\ Belok\ 'sudut'\ derajat\ menuju\ ke\ kanan\ (searah\ jarum\ jam).\r\n
+comment3.params=
+comment3.target=void\ gerak()
+comment3.text=\r\n\ Maju\ sedikit\ ke\ posisi\ saat\ ini.\r\n
+comment4.params=jarak
+comment4.target=void\ gerak(double)
+comment4.text=\r\n\ Bergerak\ maju\ dengan\ jarak\ yang\ ditentukan\ ke\ arah\ saat\ ini.\r\n
+comment5.params=
+comment5.target=boolean\ garisTepi()
+comment5.text=\r\n\ Menabrak\ Garis\ Tepi\r\n
+numComments=6
