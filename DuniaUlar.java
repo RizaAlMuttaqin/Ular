@@ -33,13 +33,13 @@ public class DuniaUlar extends World
     }
     
     /**
-     * Staus Permainan
+     * Status Permainan
      */
     public void act()
     {
         if(status==0)
         {
-            setBackground("SnakeGame.jpg");
+            setBackground("snake2.png");
             if(Greenfoot.getKey()!=null)
                 status = 1;
             return;

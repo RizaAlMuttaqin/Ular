@@ -65,7 +65,7 @@ public class Skor extends Actor
     }
     
     /**
-     * Memasukkan Gambar
+     * Memasukkan Tulisan Skor
      */
     private void gantiGambar()
     {
