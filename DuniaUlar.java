@@ -39,14 +39,14 @@ public class DuniaUlar extends World
     {
         if(status==0)
         {
-            setBackground("snake2.png");
+            setBackground("nice2.jpg");
             if(Greenfoot.getKey()!=null)
                 status = 1;
             return;
         }
         else if(status==1)//Status Permainan Aktif
         {
-            setBackground("kayu.jpg");
+            setBackground("Marble.jpg");
             
             makanan = new makanan();//Inisiasi makanan
             addObject(makanan,0,0);//Menambahkan makanan
@@ -67,7 +67,7 @@ public class DuniaUlar extends World
         else if(status==-1)//Game Over
         {
             removeObjects(getObjects(null));
-            setBackground("GameOver.jpg");
+            setBackground("gameove.jpg");
             addObject(skor, 19*BLOCK, 8);
             return;
         }

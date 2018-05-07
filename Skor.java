@@ -13,7 +13,7 @@ public class Skor extends Actor
      * Act - do whatever the Skor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private static final Color textColor = new Color(255,0,0);
+    private static final Color textColor = new Color(255,100,0);
     
     private int nilai = 0;
     private int target = 0;
