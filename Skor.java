@@ -4,8 +4,8 @@ import java.awt.Graphics;
 /**
  * Write a description of class Skor here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Much. Riza Al Muttaqin
+ * @version 1.0
  */
 public class Skor extends Actor
 {
@@ -36,7 +36,6 @@ public class Skor extends Actor
     
     public void act() 
     {
-        // Add your action code here.
         if(nilai < target)
         {
             nilai++;
@@ -65,7 +64,7 @@ public class Skor extends Actor
     }
     
     /**
-     * Memasukkan Tulisan Skor
+     * Memasukkan Skor
      */
     private void gantiGambar()
     {
