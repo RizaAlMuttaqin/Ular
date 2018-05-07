@@ -1,0 +1,12 @@
+diff a/Ular.java b/Ular.java	(rejected hunks)
+@@ -3,8 +3,8 @@
+ /**
+  * Write a description of class Ular here.
+  * 
+- * @author (your name) 
+- * @version (a version number or a date)
++ * @author Much. Riza Al Muttaqin
++ * @version 1.0
+  */
+ public class Ular extends Gerakan
+ {

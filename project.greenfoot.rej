@@ -1,0 +1,16 @@
+diff a/project.greenfoot b/project.greenfoot	(rejected hunks)
+@@ -25,10 +25,10 @@
+ dependency6.from=DuniaUlar
+ dependency6.to=Score
+ dependency6.type=UsesDependency
+-editor.fx.0.height=694
+-editor.fx.0.width=1294
+-editor.fx.0.x=-7
+-editor.fx.0.y=-7
++editor.fx.0.height=0
++editor.fx.0.width=0
++editor.fx.0.x=0
++editor.fx.0.y=0
+ mainWindow.height=1042
+ mainWindow.width=1942
+ mainWindow.x=-11
