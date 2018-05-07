@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class DuniaUlar here.
  * 
- * @author (Much. Riza Al Muttaqin & Amira Aliyah) 
+ * @author Much. Riza Al Muttaqin & Amira Aliyah
  * @version 1.0
  */
 public class DuniaUlar extends World

@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Ular here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Much. Riza Al Muttaqin
+ * @version 1.0
  */
 public class Ular extends Gerakan
 {

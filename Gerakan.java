@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Gerakan here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Much. Riza Al Muttaqin & Amira Aliyah
+ * @version 1.0
  */
 public class Gerakan extends Actor
 {
