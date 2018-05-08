@@ -67,7 +67,7 @@ public class DuniaUlar extends World
         else if(status==-1)//Game Over
         {
             removeObjects(getObjects(null));
-            setBackground("GameOver.jpg");
+            setBackground("gameove.jpg");
             buttons buttons=new buttons();
             addObject(buttons,150,350);
             addObject(skor, 19*BLOCK, 8);
