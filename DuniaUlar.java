@@ -66,13 +66,11 @@ public class DuniaUlar extends World
         }
         else if(status==-1)//Game Over
         {
-            removeObjects(getObjects(null));
             setBackground("gameove.jpg");
-            buttons buttons=new buttons();
-            addObject(buttons,150,350);
-            addObject(skor, 19*BLOCK, 8);
+            playAgain();
             return;
         }
+        
         
         if(dimakan)
             gantiPosisiMakanan();//Mengganti posisi dari makanan
@@ -139,6 +137,17 @@ public class DuniaUlar extends World
             badanUlar[0].setRotation(arah*90);
             status = -1;
         }
+    }
+    
+    /**
+     * Method Play Again
+     */
+    private void playAgain()
+    {
+        buttons button = new buttons();
+        addObject(button,150,350);
+        addObject(skor, 19*BLOCK, 8);
+        //removeObjects(getObjects(null));
     }
     
     /**
