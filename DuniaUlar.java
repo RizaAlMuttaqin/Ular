@@ -144,13 +144,10 @@ public class DuniaUlar extends World
      */
     private void playAgain()
     {
-        if (status == -1)
-        {
-            buttons button = new buttons();
-            addObject(button,150,350);
-            addObject(skor, 19*BLOCK, 8);
-            //removeObjects(getObjects(null));
-        }
+        buttons button = new buttons();
+        addObject(button,150,350);
+        addObject(skor, 19*BLOCK, 8);
+        //removeObjects(getObjects(null));
     }
     
     /**
