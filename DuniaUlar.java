@@ -146,8 +146,10 @@ public class DuniaUlar extends World
     {
         buttons button = new buttons();
         addObject(button,150,350);
-        addObject(skor, 19*BLOCK, 8);
+        //addObject(skor, 19*BLOCK, 8);
         //removeObjects(getObjects(null));
+        buttones keluar = new buttones();
+        addObject(keluar,150,420);
     }
     
     /**
