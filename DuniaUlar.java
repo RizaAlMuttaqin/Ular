@@ -181,6 +181,7 @@ public class DuniaUlar extends World
         int x = 0, y = 0;
         boolean penindihan = true;
         dimakan = false;
+        Greenfoot.playSound("Mario Jamping.mp3");
         
         while(penindihan)
         {
