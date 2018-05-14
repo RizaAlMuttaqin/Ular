@@ -40,7 +40,9 @@ public class DuniaUlar extends World
         if(status==0)
         {
             setBackground("nice2.jpg");
-            if(Greenfoot.getKey()!=null)
+            //playbut play = new playbut();
+            //addObject(play,150,350);
+            if(Greenfoot.getKey() != null)
                 status = 1;
             return;
         }
