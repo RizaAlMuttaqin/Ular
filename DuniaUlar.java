@@ -18,7 +18,6 @@ public class DuniaUlar extends World
     private boolean dimakan;
     private int status;
     public static final int BLOCK = 15;
-    
     /**
      * Constructor for objects of class DuniaUlar.
      * 
@@ -42,6 +41,7 @@ public class DuniaUlar extends World
             setBackground("nice2.jpg");
             //playbut play = new playbut();
             //addObject(play,150,350);
+            //Greenfoot.playSound("title-theme.mp3");
             if(Greenfoot.getKey() != null)
             {
                 status = 1;
@@ -70,7 +70,7 @@ public class DuniaUlar extends World
         }
         else if(status==-1)//Game Over
         {
-            //removeObjects(getObjects(null));
+            removeObjects(getObjects(null));
             setBackground("gameove.jpg");
             playAgain();
             return;

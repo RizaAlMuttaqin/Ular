@@ -19,5 +19,5 @@ public class buttones extends Actor
             Greenfoot.setWorld(new DuniaUlar());
             Greenfoot.stop();
         }
-    }    
+    }
 }
