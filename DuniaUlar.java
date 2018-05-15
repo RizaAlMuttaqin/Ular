@@ -43,7 +43,9 @@ public class DuniaUlar extends World
             //playbut play = new playbut();
             //addObject(play,150,350);
             if(Greenfoot.getKey() != null)
+            {
                 status = 1;
+            }
             return;
         }
         else if(status==1)//Status Permainan Aktif
@@ -53,8 +55,8 @@ public class DuniaUlar extends World
             makanan = new makanan();//Inisiasi makanan
             addObject(makanan,0,0);//Menambahkan makanan
             
-            skor = new Skor("Skor");//Inisiasi skor
-            addObject(skor, 19*BLOCK, 8);//Menambahkan skor
+            skor = new Skor("Skor ");//Inisiasi skor
+            addObject(skor, 18*BLOCK, 8);//Menambahkan skor
             
             badanUlar = new Ular[3];
             for(int i=0; i<badanUlar.length; i++)
@@ -130,6 +132,7 @@ public class DuniaUlar extends World
                 if(badanUlar[0].getX()==badanUlar[i].getX() && badanUlar[0].getY() == badanUlar[i].getY())
                 {
                     status = -1;
+                    Greenfoot.playSound("Super Mario Dies.mp3");
                 }
             }
         }
@@ -138,6 +141,7 @@ public class DuniaUlar extends World
             arah = putaran/90;
             badanUlar[0].setRotation(arah*90);
             status = -1;
+            Greenfoot.playSound("Super Mario Dies.mp3");
         }
     }
     
@@ -151,7 +155,7 @@ public class DuniaUlar extends World
         //addObject(skor, 19*BLOCK, 8);
         //removeObjects(getObjects(null));
         buttones keluar = new buttones();
-        addObject(keluar,150,420);
+        addObject(keluar,150,410);
     }
     
     /**
@@ -161,6 +165,7 @@ public class DuniaUlar extends World
     {
         Ular u = new Ular(false);
         Ular ularLama[] = new Ular[badanUlar.length];
+        Greenfoot.playSound("Mario Jamping.mp3");
         for(int i=0; i < badanUlar.length; i++)
         {
             ularLama[i] = badanUlar[i];
@@ -183,24 +188,22 @@ public class DuniaUlar extends World
         int x = 0, y = 0;
         boolean penindihan = true;
         dimakan = false;
-        Greenfoot.playSound("Mario Jamping.mp3");
         
         while(penindihan)
         {
             x = Greenfoot.getRandomNumber(getWidth()/BLOCK);
             y = Greenfoot.getRandomNumber(getHeight()/BLOCK);
-            
             for(int i = 0; i < badanUlar.length; i++)
             {
                 //Kondisi untuk mengecek makanan agar tidak tersentuh ular
                 if(x!=badanUlar[i].getX() || y != badanUlar[i].getY())
                 {
+                    //Greenfoot.playSound("Mario Jamping.mp3");
                     penindihan = false;
                     break;
                 }
             }
         }
-        
         makanan.setLocation(x*BLOCK, y*BLOCK);
     }
 }

@@ -24,6 +24,7 @@ public class Skor extends Actor
     {
         this("");
     }
+    
     public Skor(String prefix)
     {
         teks = prefix;
