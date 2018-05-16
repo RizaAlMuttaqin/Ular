@@ -17,7 +17,7 @@ public class DuniaUlar extends World
     private int arah;
     private boolean dimakan;
     private int status;
-    public static final int BLOCK = 15;
+    public static final int BLOCK = 18;
     /**
      * Constructor for objects of class DuniaUlar.
      * 
@@ -41,7 +41,6 @@ public class DuniaUlar extends World
             setBackground("nice2.jpg");
             //playbut play = new playbut();
             //addObject(play,150,350);
-            //Greenfoot.playSound("title-theme.mp3");
             if(Greenfoot.getKey() != null)
             {
                 status = 1;
@@ -51,7 +50,7 @@ public class DuniaUlar extends World
         else if(status==1)//Status Permainan Aktif
         {
             setBackground("Marble.jpg");
-            
+            //Greenfoot.playSound("title-theme.mp3");
             makanan = new makanan();//Inisiasi makanan
             addObject(makanan,0,0);//Menambahkan makanan
             
@@ -62,7 +61,7 @@ public class DuniaUlar extends World
             for(int i=0; i<badanUlar.length; i++)
             {
                 badanUlar[i] = new Ular(i==0);
-                addObject(badanUlar[i], 6*BLOCK+(badanUlar.length-i)*BLOCK, 2*BLOCK);
+                addObject(badanUlar[i], 6*15+(badanUlar.length-i)*15, 2*15);
             }
             gantiPosisiMakanan();
             status = 2;
@@ -70,7 +69,7 @@ public class DuniaUlar extends World
         }
         else if(status==-1)//Game Over
         {
-            removeObjects(getObjects(null));
+            //removeObjects(getObjects(null));
             setBackground("gameove.jpg");
             playAgain();
             return;
@@ -105,7 +104,7 @@ public class DuniaUlar extends World
         int previousLocationY = badanUlar[0].getY();
         
         badanUlar[0].setRotation(arah*90);
-        badanUlar[0].move(BLOCK);
+        badanUlar[0].move(15);
         
         if(badanUlar[0].getX()!=previousLocationX || badanUlar[0].getY()!=previousLocationY)//Mengecek ketika ular menabrak garis tepi
         {
@@ -116,7 +115,7 @@ public class DuniaUlar extends World
                 
                 previousLocationX = badanUlar[i].getX();
                 previousLocationY = badanUlar[i].getY();
-                badanUlar[i].move(BLOCK); // Badan Ular seluruhnya hanya begerak satu gerakan
+                badanUlar[i].move(15); // Badan Ular seluruhnya hanya begerak satu gerakan
                 putaran = sisaPutaran;
             }
         
@@ -191,8 +190,8 @@ public class DuniaUlar extends World
         
         while(penindihan)
         {
-            x = Greenfoot.getRandomNumber(getWidth()/BLOCK);
-            y = Greenfoot.getRandomNumber(getHeight()/BLOCK);
+            x = Greenfoot.getRandomNumber(getWidth()/15);
+            y = Greenfoot.getRandomNumber(getHeight()/15);
             for(int i = 0; i < badanUlar.length; i++)
             {
                 //Kondisi untuk mengecek makanan agar tidak tersentuh ular
@@ -204,6 +203,6 @@ public class DuniaUlar extends World
                 }
             }
         }
-        makanan.setLocation(x*BLOCK, y*BLOCK);
+        makanan.setLocation(x*15, y*15);
     }
 }
