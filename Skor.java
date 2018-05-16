@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Graphics;
-
+import java.awt.Color;
 /**
  * Write a description of class Skor here.
  * 

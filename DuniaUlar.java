@@ -49,7 +49,7 @@ public class DuniaUlar extends World
         }
         else if(status==1)//Status Permainan Aktif
         {
-            setBackground("Marble.jpg");
+            setBackground("Solid Background.jpg");
             //Greenfoot.playSound("title-theme.mp3");
             makanan = new makanan();//Inisiasi makanan
             addObject(makanan,0,0);//Menambahkan makanan
