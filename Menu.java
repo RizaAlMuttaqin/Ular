@@ -23,6 +23,7 @@ public class Menu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(20*BLOCK, 30*BLOCK,1);
+        addObject(new Play(),550,240);
     }
     
     public void act()
