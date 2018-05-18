@@ -20,7 +20,7 @@ public class Ular extends Gerakan
         }
         else
         {
-            setImage("badan3.png");
+            setImage("badan2.png");
         }
     }
     

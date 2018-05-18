@@ -49,13 +49,13 @@ public class DuniaUlar extends World
         }
         else if(status==1)//Status Permainan Aktif
         {
-            setBackground("Solid Background.jpg");
+            setBackground("BG.png");
             //Greenfoot.playSound("title-theme.mp3");
             makanan = new makanan();//Inisiasi makanan
             addObject(makanan,0,0);//Menambahkan makanan
             
-            skor = new Skor("Skor ");//Inisiasi skor
-            addObject(skor, 18*BLOCK, 8);//Menambahkan skor
+            skor = new Skor("Skor : ");//Inisiasi skor
+            addObject(skor, 19*BLOCK, 10);//Menambahkan skor
             
             badanUlar = new Ular[3];
             for(int i=0; i<badanUlar.length; i++)
@@ -150,11 +150,11 @@ public class DuniaUlar extends World
     private void playAgain()
     {
         buttons button = new buttons();
-        addObject(button,150,350);
+        addObject(button,180,350);
         //addObject(skor, 19*BLOCK, 8);
         //removeObjects(getObjects(null));
         buttones keluar = new buttones();
-        addObject(keluar,150,410);
+        addObject(keluar,180,410);
     }
     
     /**
@@ -170,7 +170,7 @@ public class DuniaUlar extends World
             ularLama[i] = badanUlar[i];
         }
         badanUlar = new Ular[badanUlar.length+1];
-        for(int i=0; i<badanUlar.length-1; i++)
+        for(int i=0; i < badanUlar.length-1; i++)
         {
             badanUlar[i] = ularLama[i];
         }
@@ -180,7 +180,7 @@ public class DuniaUlar extends World
     }
     
     /**
-     * Method untuk mengubah tempat dimana makanan ditampilkan
+     * Method untuk mengubah Posisi makanan ditampilkan
      */
     private void gantiPosisiMakanan()
     {
@@ -190,8 +190,8 @@ public class DuniaUlar extends World
         
         while(penindihan)
         {
-            x = Greenfoot.getRandomNumber(getWidth()/15);
-            y = Greenfoot.getRandomNumber(getHeight()/15);
+            x = Greenfoot.getRandomNumber(getWidth()/BLOCK);
+            y = Greenfoot.getRandomNumber(getHeight()/BLOCK);
             for(int i = 0; i < badanUlar.length; i++)
             {
                 //Kondisi untuk mengecek makanan agar tidak tersentuh ular

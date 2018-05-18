@@ -15,5 +15,5 @@ comment4.target=void\ ularTumbuh(int,\ int,\ int)
 comment4.text=\r\n\ Method\ untuk\ menambah\ panjang\ badan\ ular\r\n
 comment5.params=
 comment5.target=void\ gantiPosisiMakanan()
-comment5.text=\r\n\ Method\ untuk\ mengubah\ tempat\ dimana\ makanan\ ditampilkan\r\n
+comment5.text=\r\n\ Method\ untuk\ mengubah\ Posisi\ makanan\ ditampilkan\r\n
 numComments=6

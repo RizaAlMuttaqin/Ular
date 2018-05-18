@@ -28,10 +28,12 @@ public class Skor extends Actor
     public Skor(String prefix)
     {
         teks = prefix;
-        panjangTeks = (teks.length() + 2) * 10;
+        panjangTeks = (teks.length() + 15) * 10;
         
-        setImage(new GreenfootImage(panjangTeks, 16));
+        setImage(new GreenfootImage(panjangTeks, 25));
         GreenfootImage gambar = getImage();
+        Font font = gambar.getFont();
+        gambar.setFont(font.deriveFont(24.0F));
         gantiGambar();
     }
     
@@ -71,6 +73,6 @@ public class Skor extends Actor
     {
         GreenfootImage gambar = getImage();
         gambar.clear();
-        gambar.drawString(teks + nilai, 1, 12);
+        gambar.drawString(teks + nilai, 1, 25);
     }
 }

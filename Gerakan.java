@@ -7,53 +7,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 1.0
  */
 public class Gerakan extends Actor
-{
-    private static final double kecepatan_jalan = 5.0;
-    
-    /**
-     * Berputar 90 derajat ke kanan (searah jarum jam).
-     */
-    public void belok()
-    {
-        belok(90);
-    }
-    
-    /**
-     * Belok 'sudut' derajat menuju ke kanan (searah jarum jam).
-     */
-    public void belok(int sudut)
-    {
-        setRotation(getRotation() + sudut);
-    }
-    
-    /**
-     * Maju sedikit ke posisi saat ini.
-     */
-    public void gerak()
-    {
-        gerak(kecepatan_jalan);
-    }
-    
-    /**
-     * Bergerak maju dengan jarak yang ditentukan ke arah saat ini.
-     */
-    public void gerak(double jarak)
-    {
-        double sudut = Math.toRadians(getRotation());
-        int x = (int) Math.round(getX() + Math.cos(sudut) * jarak);
-        int y = (int) Math.round(getY() + Math.sin(sudut) * jarak);
-        
-        setLocation(x,y);
-    }
+{   
+    private void gerakan()  
+    {  
+        move(9);
+        if (Greenfoot.getRandomNumber (100) < 10)  
+            {  
+                turn(Greenfoot.getRandomNumber (90-45));  
+            }  
+        if (atWorldEdge())
+            {  
+                turn(90);
+            }  
+    } 
     
     /**
      * Menabrak Garis Tepi
      */
-    public boolean garisTepi()
+    public boolean atWorldEdge()
     {
-        if(getX() < 20 || getX() > getWorld().getWidth() - 20)
+        if(getX() <= 0 || getX() >= getWorld().getWidth()-1)
             return true;
-        if(getY() < 20 || getY() > getWorld().getHeight() - 20)
+        if(getY() <= 0 || getY() >= getWorld().getHeight()-1)
             return true;
         else
             return false;
